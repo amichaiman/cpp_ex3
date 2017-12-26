@@ -75,11 +75,6 @@ int DefencePack:: getDefenceSize() const
     return defenceSize;
 }
 
-void DefencePack::printPowersOfAllPacks() const
-{
-    for (int i=0; i<defenceSize; i++)
-        cout << "the power of pack " << i << " is " << packs[i]->getPower() << endl;
-}
 
 int DefencePack::strongestPack() const
 {

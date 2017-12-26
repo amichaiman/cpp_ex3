@@ -1,6 +1,6 @@
 #ifndef _PACK_H
 #define _PACK_H
-
+/*   this class is a vector of 1 or 0 only   */
 #include <iostream>
 
 using namespace std;

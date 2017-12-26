@@ -23,7 +23,7 @@ int main( int argv,char **argc)
     
     if (argv < 3)           //if not enough arguments given by user
     {
-        cout << "ERROR: Invalid input." << endl;
+        cout << "ERROR: Invalid input.";
         exit(1);
     }
     
@@ -31,7 +31,7 @@ int main( int argv,char **argc)
     
     if (!config.is_open())  //if file does not exist
     {
-        cout << "ERROR: Invalid input." << endl;
+        cout << "ERROR: Invalid input.";
         exit(1);
     }
     
@@ -44,7 +44,7 @@ int main( int argv,char **argc)
     //if one or more of the arguments given in 'config.dat' is invalid, program terminates
     if (!dp.setPackLen(packLen) || !dp.setDefenceSize(defenceSize) || timeCycles < Sizes::MIN_CYCLES || timeCycles > Sizes::MAX_CYCLES)
     {
-        cout << "ERROR: Invalid input." << endl;
+        cout << "ERROR: Invalid input.";
         exit(1);
     }
     
@@ -56,16 +56,12 @@ int main( int argv,char **argc)
     //if data in 'offence.dat' isn't as required program terminates
     if (!ap.setPacks(offence)) 
     {
-        cout << "ERROR: Invalid input." << endl;
+        cout << "ERROR: Invalid input.";
         exit(1);
     }
     
     dp.fillWithRandom();    //defence initializes with random {0,1}^packLen values
-    cout << "defence" << endl;
-    dp.print();
-    cout << "offence:" << endl;
-    ap.print();
-    
+
     war.checkDefencePower(ap,dp);   //each of the defence packs in dp is checked against all other packs in ap and sets its power accordingly
     
     int i;
@@ -77,9 +73,6 @@ int main( int argv,char **argc)
     }
     cout << i << endl; //number of cycles
     dp.orginizeByPower();   
-    cout << "offence" << endl; 
-    ap.print();
-    cout << "defence" << endl;
     dp.print();
     return 0;
 }

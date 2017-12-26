@@ -33,7 +33,3 @@ void WarZone::checkDefencePower(const AttackPack &attackPack, DefencePack &defen
     for(int i=0; i<defencePack.getDefenceSize(); i++)
         findMaxPower(attackPack,defencePack.getPack(i));
 }
-
-
-
-

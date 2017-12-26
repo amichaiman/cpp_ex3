@@ -1,6 +1,6 @@
 #ifndef _SIZES_H
 #define _SIZES_H
-
+/*   this class is the minimum and maximum values for various variables in ex3   */
 class Sizes
 {
 public:

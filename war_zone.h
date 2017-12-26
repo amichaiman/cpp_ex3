@@ -1,13 +1,10 @@
 #ifndef _WAR_ZONE_H
 #define _WAR_ZONE_H
-
+/*   this class is where interactions between offence packs and defence packs take place   */
 #include "pack.h"
 #include "Dpack.h"
 #include "attack_pack.h"
 #include "defence_pack.h"
-
-#include <iostream>     //just for debugging
-using namespace std;       //just for debugging
 
 class WarZone
 {

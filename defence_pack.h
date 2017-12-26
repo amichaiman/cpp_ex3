@@ -1,13 +1,13 @@
 #ifndef _DEFENCE_PACK_H
 #define _DEFENCE_PACK_H
 
+/*    this class is the group of packs that belong to the 'defence' group    */
+
 #include "Dpack.h"
 #include "sizes.h"
 #include <cstdlib>
 #include <ctime>
 
-#include <iostream>     //just for debugging
-using namespace std;       //just for debugging
 class DefencePack
 {
 public:
@@ -22,7 +22,6 @@ public:
     void fillWithRandom() const;        //fills all packs in defence group with random {0,1} values
     int getDefenceSize() const;         //returns number of packs in defence group
     int getPackLen() const;         //returns pack length 
-    void printPowersOfAllPacks() const; //prints power of all packs (used for debugging)
     int strongestPack() const;      //returns power of strongest pack in group
     void orginizeByPower();         //packs are reordered according to power value
     void updatePacks();     //half of the packs(the ones with the higher power value) are paired with a random pack from group. then two indexs are randomly chosen and all values between two indexs are swaped respectively
