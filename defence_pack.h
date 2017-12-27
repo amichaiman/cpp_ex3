@@ -30,6 +30,7 @@ private:
     int packLen;        //length of packs
     DPack **packs;      //group of packs
 
+    bool isEven(int n);
     void swapPacks(const int i, const int j); //swaps spaces of two packs. used by 'orginizeByPower' function
 };
 

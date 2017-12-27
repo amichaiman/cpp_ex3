@@ -37,7 +37,7 @@ bool DefencePack::setDefenceSize(const int theSize)
 {
     defenceSize = theSize;
     
-    if (defenceSize < Sizes::MIN_DEFENCE_SIZE || defenceSize > Sizes::MAX_DEFENCE_SIZE)
+    if (defenceSize < Sizes::MIN_DEFENCE_SIZE || defenceSize > Sizes::MAX_DEFENCE_SIZE || !isEven(defenceSize))
         return false;
     
     packs = new DPack*[defenceSize];
@@ -116,4 +116,9 @@ void DefencePack::updatePacks()
 int DefencePack::getPackLen() const
 {
     return packLen;
+}
+
+bool DefencePack::isEven(int n)
+{
+    return n%2==0 ? 1 : 0;
 }

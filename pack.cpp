@@ -20,13 +20,16 @@ int Pack::getSize() const
     return size;
 }
 
-int& Pack::operator[](const int index) const
+int& Pack::operator[](const int index)
 {
     return bin[index];
 }
 
 
-
+int Pack::operator[](const int index) const
+{
+    return bin[index];
+}
 
 void Pack::print() const
 {

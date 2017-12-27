@@ -12,7 +12,8 @@ public:
     Pack(const Pack &rhs); //copy c'tor
     ~Pack();                //d'tor
     int getSize() const;        //returns size of pack
-    int& operator[](const int index) const; //returns index in bin
+    int& operator[](const int index); //returns index in bin
+    int operator[](const int index) const;
     void print() const;     //prints bin to standard input stream
 private:
     int size;       //size of pack
